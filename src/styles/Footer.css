@@ -1,0 +1,138 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding: 2rem 0;
+  border-top: 1px solid #333;
+  width: 103%;
+  position: relative;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.heart-icon {
+  color: #ff6b6b;
+  fill: #ff6b6b;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.highlight {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.name {
+  color: #4ecdc4;
+  font-weight: 500;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.footer-link {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+}
+
+.footer-link:hover {
+  color: #4ecdc4;
+  transform: translateY(-2px);
+  background-color: rgba(78, 205, 196, 0.1);
+}
+
+.footer-link svg {
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover svg {
+  color: #4ecdc4;
+  transform: scale(1.1);
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.footer-link:hover::after {
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-text {
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-link {
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    gap: 1rem;
+  }
+  
+  .footer-link span {
+    font-size: 0.8rem;
+  }
+  
+  .footer-link svg {
+    width: 16px;
+    height: 16px;
+  }
+}

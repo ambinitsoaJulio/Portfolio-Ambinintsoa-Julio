@@ -1,0 +1,134 @@
+.titleA {
+  color: #4f46e5;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-left: 35%;
+  margin-top: -2%;
+}
+.about {
+  padding: 5rem 0;
+  background-color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Ombre plus douce mais visible */
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  margin-top: -50px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Ombre texte plus visible */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* Ombre plus prononcée */
+  border: 1px solid rgba(0, 0, 0, 0.03); /* Bordure subtile pour accentuer */
+}
+
+.about-image-container {
+  flex: 1;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+  transition: all 0.3s ease;
+  transform: perspective(1000px) rotateY(-5deg); /* Effet 3D subtil */
+}
+
+.about-image:hover {
+  transform: perspective(1000px) rotateY(-8deg) translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  flex: 3;
+  padding: 1rem;
+}
+
+.about-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.about-paragraph:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    align-items: flex-end; /* Aligne tout le contenu à droite */
+  }
+  
+  .about-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 27px; /* Ajoute un décalage vers la gauche */
+  }
+
+
+  .about-image {
+    max-width: 250px; 
+    margin: 0 0 2rem 0; 
+    transform: none;
+    width: auto; 
+    height: auto;
+  }
+  
+  .about-text {
+    width: 100%; 
+    padding: 0;
+  }
+  
+  .about-paragraph {
+    padding: 1rem;
+    text-align: justify; 
+    hyphens: auto; 
+    max-width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image {
+    max-width: 200px; 
+  }
+  
+  .about-paragraph {
+    font-size: 1rem; 
+    line-height: 1.5; 
+    padding: 0.8rem 0; 
+  }
+  .titleA {
+  color: #4f46e5;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-left: 5%;
+  margin-top: -2%;
+}
+}
