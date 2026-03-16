@@ -7,12 +7,34 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <p className="footer-text">
-          © {new Date().getFullYear()} | Made with{' '}
-          <Heart className="heart-icon" size={16} />{' '}
-          by <span className="highlight">AMBININTSOA</span>{' '}
-          <span className="name">Nirina Adonias Julio</span>
-        </p>
+      <p className="footer-text">
+            {`© ${new Date().getFullYear()} | Made with `.split('').map((char, i) => (
+              <span key={i} className="rainbow-char" style={{ '--i': i }}>
+                {char}
+              </span>
+            ))}
+            <Heart className="heart-icon" size={16} />
+            {' by '.split('').map((char, i) => (
+              <span key={`by-${i}`} className="rainbow-char" style={{ '--i': i + 20 }}>
+                {char}
+              </span>
+            ))}
+            <span className="highlight">
+              {'AMBININTSOA'.split('').map((char, i) => (
+                <span key={`name1-${i}`} className="rainbow-highlight" style={{ '--i': i }}>
+                  {char}
+                </span>
+              ))}
+            </span>
+            {' '}
+            <span className="name">
+              {'Nirina Adonias Julio'.split('').map((char, i) => (
+                <span key={`name2-${i}`} className="rainbow-name" style={{ '--i': i }}>
+                  {char}
+                </span>
+              ))}
+            </span>
+          </p>
         <div className="footer-links">
           <Link to="home" spy={true} smooth={true} offset={-70} duration={500} className="footer-link">
             <Home size={18} />
@@ -26,7 +48,7 @@ const Footer = () => {
             <Briefcase size={18} />
             <span>Services</span>
           </Link>
-          <Link to="projets" spy={true} smooth={true} offset={-70} duration={500} className="footer-link">
+          <Link to="projects" spy={true} smooth={true} offset={-70} duration={500} className="footer-link">
             <FolderOpen size={18} />
             <span>Projets</span>
           </Link>

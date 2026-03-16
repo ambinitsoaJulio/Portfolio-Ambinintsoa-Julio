@@ -66,6 +66,7 @@ const Contact = () => {
         
         window.open(whatsappUrl, '_blank');
       };
+      
   return (
     <section id="contact" className="contact">
       <div className="contact-container">

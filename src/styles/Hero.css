@@ -1,12 +1,12 @@
 /* Hero.css */
 .portfolio-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #f3e8ff 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
   padding-top: 90px;
+  margin-left: 30px;
 }
 
 .portfolio-wrapper {
@@ -57,7 +57,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #374151;
-  margin-left: 120px;
+  margin-left: 90px;
 }
 
 .role-section {
@@ -360,14 +360,18 @@
   .description {
     font-size: 1rem; /* Taille de police légèrement réduite */
     line-height: 1.6; /* Meilleure lisibilité */
+    max-width: 120%;
   }
 }
 
 @media (max-width: 767px) {
+  .portfolio-container{
+    margin-right: 35px;
+  }
  .portfolio-grid {
     display: flex;
     flex-direction: column;
-    text-align: center; /* Centre tout le texte */
+    text-align: center; 
   }
 
   .image-section {
@@ -379,7 +383,7 @@
 
   .content-section {
     order: 1;
-    max-width: 85%; /* Limite la largeur du texte */
+    max-width: 100%; /* Limite la largeur du texte */
     margin: 0 auto; /* Centre le bloc de contenu */
     display: flex;
     flex-direction: column;
@@ -464,7 +468,7 @@
 
   .image-section,
   .content-section {
-    order: initial; /* Réinitialise l'ordre */
+    order: initial; 
   }
    .tech-icon-1 {
     bottom: 2.5rem;

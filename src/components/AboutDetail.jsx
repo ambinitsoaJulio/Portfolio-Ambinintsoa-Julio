@@ -1,13 +1,13 @@
 // AboutDetail.jsx
 import React from 'react';
 import '../styles/AboutDetail.css';
-import {Code, Laptop, Smartphone, Server, Settings, GraduationCap, Check, Square, Brain, User} from 'lucide-react';
+import {Code, Badge,UserCog  ,Laptop, Smartphone, Server, Settings, GraduationCap, Check, Square, Brain, User} from 'lucide-react';
 const AboutDetail = () => {
   return (
     <div className="about-detail">
       <div className="section-titleA">
-        <User className="title-iconA" />
-        <h1 className="sH1">À propos de moi</h1>
+        <UserCog  className="title-iconA" />
+        <h1 className="sH1">Profil Professionnel</h1>
       </div>
       <div className="columns-container">
         {/* Colonne de gauche - Expériences & Projets */}

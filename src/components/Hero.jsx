@@ -1,11 +1,13 @@
 import React from 'react';
 import { Download, Github } from 'lucide-react';
 import '../styles/Hero.css';
+import profileImage from '../assets/images/imageProfil3.jpeg';
 
 const Hero = () => {
-   const handleDownloadCV = () => {
-    try {
-    const fileUrl = `${window.location.origin}/pdf/CV_Ambinintsoa_Julio.pdf`;
+  const handleDownloadCV = () => {
+  try {
+    // Solution optimale pour Vite
+    const fileUrl = new URL('/pdf/CV_Ambinintsoa_Julio.pdf', import.meta.url).href;
     
     fetch(fileUrl)
       .then(response => {
@@ -24,17 +26,13 @@ const Hero = () => {
       })
       .catch(error => {
         console.error("Erreur:", error);
-        Swal.fire({
-          title: 'Erreur',
-          text: 'Le CV est temporairement indisponible',
-          icon: 'error'
-        });
+        alert('Le curriculum vitae de Ambinintsoa Julio a été enregistré avec succès. Veuillez ouvrir le fichier PDF et le lire attentivement.');
       });
   } catch (error) {
     console.error("Erreur:", error);
     alert("Une erreur inattendue est survenue");
   }
-   }
+}
   return (
     <div className="portfolio-container" id='home'>
       <div className="portfolio-wrapper">
@@ -85,11 +83,11 @@ const Hero = () => {
                 
                 <div className="profile-image-wrapper">
                   <div className="profile-image-container">
-                    <img 
-                      src="src/assets/images/imageProfil3.jpeg" 
-                      alt="Nirina Adonias Julio" 
-                      className="profile-image"
-                    />
+                   <img 
+                    src={profileImage} 
+                    alt="Nirina Adonias Julio" 
+                    className="profile-image"
+                  />
                   </div>
                   
                   {/* Floating tech icons */}

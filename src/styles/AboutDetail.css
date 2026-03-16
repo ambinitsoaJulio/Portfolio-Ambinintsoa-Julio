@@ -175,17 +175,22 @@
     margin-left: 0;
     justify-content: center; /* Centrer le titre */
     padding-left: 0;
+    margin-bottom: 10px;
   }
   
   .section h1 {
     font-size: 1.3rem;
-    justify-content: center; /* Centrer les titres de section */
+    justify-content: center;
+    margin-left: 15px;
   }
   
   .card {
     padding: 1rem;
     margin-bottom: 1rem;
-    text-align: center; /* Centrer le contenu des cartes */
+    text-align: center; 
+    max-width: 85%; 
+    margin-left: 15px;
+    margin-right: auto;
   }
   
   .card h2 {
@@ -198,8 +203,13 @@
   }
   
   .card p {
-    font-size: 0.85rem;
-    text-align: center; /* Centrer les paragraphes */
+     font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 100%; /* S'assure que le texte ne dépasse pas */
+    word-wrap: break-word;
+    hyphens: auto; /* Césure des mots si nécessaire */
+    padding: 0 0.5rem; /* Petit padding pour éviter le bord à bord */
   }
   
   .education-list,
@@ -214,6 +224,10 @@
     font-size: 0.85rem;
     justify-content: center; /* Centrer les éléments de liste */
   }
+
+    .section{
+      margin-right: 20px;
+    }
 }
 
 /* Très petits écrans */
@@ -227,9 +241,13 @@
   }
   
   .card {
-    padding: 0.8rem;
+      max-width: 95%; /* Un peu plus large sur très petits écrans */
+      padding: 0.8rem;
   }
-  
+   .card p {
+      font-size: 0.85rem;
+      text-align-last: center;
+    }
   .section-icon,
   .item-icon {
     width: 1rem;

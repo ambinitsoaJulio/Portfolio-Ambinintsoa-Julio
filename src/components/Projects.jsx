@@ -1,14 +1,21 @@
 // src/components/Projects.jsx
 import React, { useState } from 'react';
-import { Code, Music, Droplet, ExternalLink, Github, BookOpen, ShoppingBag, X } from 'lucide-react';
+import { Code, Music, Droplet, ExternalLink, Github, BookOpen, ShoppingBag, X, FolderKanban } from 'lucide-react';
 import { Link } from 'react-scroll';
 import '../styles/Projects.css';
+import chaussureImg from '../assets/images/chaussure4.png';
+import notesImg from '../assets/images/imageAfficheProjet2.png';
+import portfolioImg from '../assets/images/imageAfficheProjet3.webp';
+import lecteurImg from '../assets/images/lecteurMusique2.png';
+import vetementImg from '../assets/images/imageAfficheProjet1.png';
+import sangImg from '../assets/images/sang.png';
+import gestionProjetImg from '../assets/images/image gestion projet.png';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
-      {
+    {
       id: 1,
       title: "Boutique en ligne de chaussures",
       shortDescription: "Plateforme e-commerce complète pour vente de chaussures",
@@ -21,7 +28,7 @@ const Projects = () => {
       ],
       githubLink: "https://github.com/ambinitsoaJulio/TECH_WEB_AV", 
       demoLink: "#",
-      image: "./src/assets/images/chaussure4.png",
+      image: chaussureImg,
       features: [
         "Catalogue produits avec filtres avancés",
         "Fiche produit détaillée (tailles/couleurs)",
@@ -36,8 +43,8 @@ const Projects = () => {
         "Responsive design",
         "Sécurisation des transactions"
       ],
-        icon: <ShoppingBag size={20} />
-      },
+      icon: <ShoppingBag size={20} />
+    },
     {
       id: 2,
       title: "Plateforme de Partage de Notes de cours",
@@ -46,7 +53,7 @@ const Projects = () => {
       technologies: ["Java EE", "WildFly", "JBoss", "JPA"],
       githubLink: "https://github.com/ambinitsoaJulio/Java-EE-WildFly-JBoss-",
       demoLink: "#",
-      image: "./src/assets/images/imageAfficheProjet2.png",
+      image: notesImg,
       features: [
         "Publication de notes de cours",
         "Système de commentaires",
@@ -56,56 +63,55 @@ const Projects = () => {
       ],
       icon: <BookOpen size={20} />
     },
-     {
-        id: 3,
-        title: "Portfolio Professionnel",
-        shortDescription: "Mon portfolio personnel présentant mes compétences et projets",
-        fullDescription: "Ce portfolio a été conçu pour présenter de manière élégante et professionnelle mon parcours, mes compétences techniques et mes réalisations. Il met en valeur mes capacités en développement frontend avec une interface moderne, réactive et performante.",
-        technologies: ["React.js", "React Lucide", "CSS3", "Vite"],
-        githubLink: "https://github.com/ambinintsoaJulio/mon-portfolio",
-        demoLink: "#",
-        image: "./src/assets/images/imageAfficheProjet3.webp",
-        features: [
-          "Design moderne et responsive",
-          "Navigation fluide avec react-scroll",
-          "Affichage des projets avec modal détaillée",
-          "Section de contact fonctionnelle",
-          "Optimisation des performances",
-          "Intégration d'icônes Lucide",
-          "Thème coloré personnalisé"
-        ],
-        icon: <Code size={20} />
-      },
-      {
-        id: 4,
-        title: "Application Mobile de Lecture Audio/Video - Mozika",
-        shortDescription: "Application de lecture audio/video avec gestion complète de médias",
-        fullDescription: "Lecteur multimedia complet développé avec React Native et Expo Go. L'application scanne automatiquement les fichiers audio/video du téléphone, offre une expérience de lecture fluide avec contrôle complet et des fonctionnalités avancées de gestion de playlist.",
-        technologies: [
-          "React Native", 
-          "Expo Go",
-          "React Navigation",
-          "Expo AV"
-        ],
-        githubLink: " https://github.com/ambinitsoaJulio/projet-lecteur-musique-julioL1",
-        demoLink: "#",
-        image: "./src/assets/images/lecteurMusique2.png",
-        features:[
-          "Lecture audio et vidéo",
-          "Mode plein écran et miniature",
-          "Scan automatique des fichiers (MP3/MP4)",
-          "Commandes : Play/Pause/Next/Previous",
-          "Gestion de playlist",
-          "Barre de progression et temps écoulé",
-          "Equalizer visuel",
-          "Recherche par titre/artiste",
-          "Fond d'écran dynamique",
-          "Dark/Light mode"
-        ],
+    {
+      id: 3,
+      title: "Portfolio Professionnel",
+      shortDescription: "Mon portfolio personnel présentant mes compétences et projets",
+      fullDescription: "Ce portfolio a été conçu pour présenter de manière élégante et professionnelle mon parcours, mes compétences techniques et mes réalisations. Il met en valeur mes capacités en développement frontend avec une interface moderne, réactive et performante.",
+      technologies: ["React.js", "React Lucide", "CSS3", "Vite"],
+      githubLink: "https://github.com/ambinintsoaJulio/mon-portfolio",
+      demoLink: "#",
+      image: portfolioImg,
+      features: [
+        "Design moderne et responsive",
+        "Navigation fluide avec react-scroll",
+        "Affichage des projets avec modal détaillée",
+        "Section de contact fonctionnelle",
+        "Optimisation des performances",
+        "Intégration d'icônes Lucide",
+        "Thème coloré personnalisé"
+      ],
+      icon: <Code size={20} />
+    },
+    {
+      id: 4,
+      title: "Application Mobile de Lecture Audio/Video - Mozika",
+      shortDescription: "Application de lecture audio/video avec gestion complète de médias",
+      fullDescription: "Lecteur multimedia complet développé avec React Native et Expo Go. L'application scanne automatiquement les fichiers audio/video du téléphone, offre une expérience de lecture fluide avec contrôle complet et des fonctionnalités avancées de gestion de playlist.",
+      technologies: [
+        "React Native", 
+        "Expo Go",
+        "React Navigation",
+        "Expo AV"
+      ],
+      githubLink: " https://github.com/ambinitsoaJulio/projet-lecteur-musique-julioL1",
+      demoLink: "#",
+      image: lecteurImg,
+      features: [
+        "Lecture audio et vidéo",
+        "Mode plein écran et miniature",
+        "Scan automatique des fichiers (MP3/MP4)",
+        "Commandes : Play/Pause/Next/Previous",
+        "Gestion de playlist",
+        "Barre de progression et temps écoulé",
+        "Equalizer visuel",
+        "Recherche par titre/artiste",
+        "Fond d'écran dynamique",
+        "Dark/Light mode"
+      ],
       icon: <Music size={25} />
-      },
-
-     {
+    },
+    {
       id: 5,
       title: "Plateforme de Prédiction de la taille de vetements",
       shortDescription: "Solution IA pour prédire la taille idéale des vêtements (S, M, L, XL)",
@@ -113,7 +119,7 @@ const Projects = () => {
       technologies: ["React", "Flask", "Python", "Machine Learning"],
       githubLink: "https://github.com/ambinitsoaJulio/Projet-RNA",
       demoLink: "#",
-      image: "./src/assets/images/imageAfficheProjet1.png",
+      image: vetementImg,
       features: [
         "Prédiction précise des tailles",
         "Interface utilisateur intuitive",
@@ -122,36 +128,75 @@ const Projects = () => {
       ],
       icon: <ShoppingBag size={20} />
     },
-      {
-        id: 6,
-        title: "Système de Gestion de Banque de Sang - CRTS Tambohobe",
-        shortDescription: "Plateforme digitale de gestion des stocks sanguins pour le centre régional de transfusion",
-        fullDescription: "Solution complète développée pour le CRTS de Fianarantsoa permettant la gestion intelligente des réserves sanguines. Le système offre un suivi en temps réel des stocks par groupe sanguin, des alertes automatisées, la gestion des donneurs et des prélèvements, avec une interface adaptée aux besoins des professionnels de santé.",
-        technologies: [
-          "Next.js",
-          "NestJS",
-          "PostgreSQL",
-          "TypeORM",
-          "Chart.js"
-        ],
-        githubLink: "https://github.com/Ranto2564/stageL3", 
-        demoLink: "#",
-        image: "./src/assets/images/sang.png",
-        features: [
-          "Tableau de bord des stocks en temps réel",
-          "Gestion des groupes sanguins (A/B/O/AB +/-)",
-          "Alertes automatiques (niveaux critiques)",
-          "Gestion des donneurs et historiques",
-          "Suivi des prélèvements et transfusions",
-          "Visualisation graphique des données",
-          "Export de rapports PDF/Excel",
-          "Système de rendez-vous en ligne",
-          "Cartographie des donneurs réguliers",
-          "Multi-niveaux d'accès (admin/médecin/technicien)",
-          "Historique complet des opérations"
-        ],
-        icon: <Droplet size={20} />
-      }
+    {
+      id: 6,
+      title: "Système de Gestion de Banque de Sang - CRTS Tambohobe",
+      shortDescription: "Plateforme digitale de gestion des stocks sanguins pour le centre régional de transfusion",
+      fullDescription: "Solution complète développée pour le CRTS de Fianarantsoa permettant la gestion intelligente des réserves sanguines. Le système offre un suivi en temps réel des stocks par groupe sanguin, des alertes automatisées, la gestion des donneurs et des prélèvements, avec une interface adaptée aux besoins des professionnels de santé.",
+      technologies: [
+        "Next.js",
+        "NestJS",
+        "PostgreSQL",
+        "TypeORM",
+        "Chart.js"
+      ],
+      githubLink: "https://github.com/Ranto2564/stageL3", 
+      demoLink: "#",
+      image: sangImg,
+      features: [
+        "Tableau de bord des stocks en temps réel",
+        "Gestion des groupes sanguins (A/B/O/AB +/-)",
+        "Alertes automatiques (niveaux critiques)",
+        "Gestion des donneurs et historiques",
+        "Suivi des prélèvements et transfusions",
+        "Visualisation graphique des données",
+        "Export de rapports PDF/Excel",
+        "Système de rendez-vous en ligne",
+        "Cartographie des donneurs réguliers",
+        "Multi-niveaux d'accès (admin/médecin/technicien)",
+        "Historique complet des opérations"
+      ],
+      icon: <Droplet size={20} />
+    },
+    {
+      id: 7,
+      title: "Plateforme de Gestion de Projet et Recherche",
+      shortDescription: "Application complète de gestion de projets avec fonctionnalités de recherche avancée",
+      fullDescription: "Cette plateforme intégrée de gestion de projet et recherche permet aux équipes de collaborer efficacement sur leurs projets. L'application offre une gestion complète des tâches, des jalons, des ressources et inclut un moteur de recherche puissant pour retrouver rapidement informations, documents et discussions. L'interface entièrement responsive s'adapte parfaitement à tous les appareils (desktop, tablette, mobile).",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Sequelize",
+      ],
+      githubLink: "https://github.com/ambinitsoaJulio/gestion-projet-recherche",
+      demoLink: "#",
+      image: gestionProjetImg,
+      features: [
+        "Tableau de bord personnalisé",
+        "Gestion de projets (création, modification, suppression)",
+        "Attribution des tâches aux membres d'équipe",
+        "Suivi du temps et des échéances",
+        "Calendrier interactif des jalons",
+        "Moteur de recherche avancée multi-critères",
+        "Filtrage par projet, statut, priorité, date",
+        "Gestion des ressources et documents",
+        "Système de notifications en temps réel",
+        "Messagerie instantanée intégrée",
+        "Rapports et statistiques de progression",
+        "Authentification sécurisée (JWT)",
+        "Rôles et permissions (admin, chef projet, membre)",
+        "Export de données (PDF, Excel)",
+        "Mode hors ligne avec synchronisation",
+        "Interface responsive (mobile-first)",
+        "Thème clair/sombre automatique",
+        "Sauvegarde automatique des modifications",
+        "Historique des activités",
+        "Intégration avec calendrier externe"
+      ],
+      icon: <FolderKanban size={20} />
+    }
   ];
 
   const openModal = (project) => {
@@ -245,9 +290,6 @@ const Projects = () => {
                 <a href={selectedProject.githubLink} className="project-link">
                   <Github size={16} /> Code
                 </a>
-               {/* <a href={selectedProject.demoLink} className="project-link">
-                  <ExternalLink size={16} /> Demo
-                </a> */}
               </div>
             </div>
           </div>
